@@ -1,15 +1,15 @@
 Youtube Clone Group Project
 
------Team Members-----
-    Amina Moufakkir 
-    Johnny Castillo
-    Keri Emmanuel
+-----Team Members-----<br>
+    Amina Moufakkir <br>
+    Johnny Castillo <br>
+    Keri Emmanuel <br>
 
-----Trello Board----
-<Insert link here>
+----Trello Board----<br>
+Insert link here
 
-----GitHub Repos----
-Group repo: https://github.com/keriarmstrong/youtube-project
+----GitHub Repos---- <br>
+Group repo: https://github.com/keriarmstrong/youtube-project <br>
 
-Pursuit repo: https://github.com/9-4-pursuit/project-youtube-clone
+Pursuit repo: https://github.com/9-4-pursuit/project-youtube-clone <br>
 
