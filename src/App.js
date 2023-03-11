@@ -11,9 +11,10 @@ function App() {
     <div className="App">
       {/* <NavBar/> */}
   
-      
+
     <h1>Youtube Clone</h1>
     <p>videos</p>
+
     </div>
   );
 }
