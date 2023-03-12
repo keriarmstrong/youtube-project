@@ -16,6 +16,8 @@ function App() {
 
     <h2>videos</h2>
 
+      </Routes>
+      <h3>WORD</h3>
     </div>
   );
 }
