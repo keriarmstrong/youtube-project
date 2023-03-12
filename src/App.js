@@ -13,7 +13,8 @@ function App() {
   
 
     <h1>Youtube Clone</h1>
-    <p>videos</p>
+
+    <h2>videos</h2>
 
     </div>
   );
