@@ -10,7 +10,7 @@ const SearchForm = () => {
             placeholder="Enter here..."
             name='name'
           />
-          <button type='submit' className='btn' style={{marginTop: '10px'}}>Search</button>
+          <button type='submit' className='btn' style={{ marginTop: '10px' }}>Search</button>
         </div>
       </form>
     </section>

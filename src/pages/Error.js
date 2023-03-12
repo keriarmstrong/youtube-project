@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 const Error = () => {
   return (
-<section>
+    <section>
       <div className="error-container">
         <h1>oops! page not found</h1>
         <Link to="/" className="btn btn-primary">
