@@ -6,18 +6,16 @@ import SingleVid from "./pages/SingleVid";
 import Error from "./pages/Error";
 
 function App() {
-  // console.log(process.env.React_APP_API_Key)
   return (
     <>
-     <Navbar />
+      <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/video/:id" element={<SingleVid />} />
         <Route path="*" element={<Error />} />
       </Routes>
-     
-       
+
     </>
   );
 }

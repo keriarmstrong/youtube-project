@@ -17,6 +17,7 @@ Variables
   --maxWidth: 40rem;
   --fullWidth: 1170px;
 }
+
 /* 
 ====== 
 Global Styles 
@@ -37,6 +38,7 @@ body {
   font-size: 1rem;
   font-weight: 300;
 }
+
 h1,
 h2,
 h3,
@@ -47,12 +49,15 @@ h6 {
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
 }
+
 p {
   margin-bottom: 1.25rem;
 }
+
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
   color: var(--mainBlack);
@@ -72,6 +77,7 @@ Navbar
   border-bottom: 2px solid var(--primaryColor);
   box-shadow: var(--lightShadow);
 }
+
 .nav-center {
   display: flex;
   justify-content: space-between;
@@ -80,10 +86,12 @@ Navbar
   margin: 0 auto;
   max-width: var(--fullWidth);
 }
+
 .nav-links {
   display: flex;
   align-items: center;
 }
+
 .nav-links a {
   text-transform: capitalize;
   display: inline-block;
@@ -95,6 +103,7 @@ Navbar
   padding: 0.25rem 0.5rem;
   transition: var(--mainTransition);
 }
+
 .nav-links a:hover {
   color: var(--primaryColor);
 }
@@ -110,6 +119,7 @@ About
   max-width: var(--maxWidth);
   margin: 0 auto;
 }
+
 .about-section p {
   line-height: 2rem;
   font-weight: 400;
@@ -144,6 +154,7 @@ Form
   letter-spacing: 0.25rem;
   color: var(--primaryColor);
 }
+
 .form-control input {
   width: 100%;
   border: none;
@@ -172,8 +183,9 @@ Buttons
   background: transparent;
   border-radius: var(--mainBorderRadius);
   display: inline-block;
- 
+
 }
+
 .btn:hover {
   background: var(--primaryColor);
   color: var(--mainWhite);
@@ -189,8 +201,59 @@ Error
   text-align: center;
   justify-content: center;
 }
+
 .error-container {
   text-align: center;
-  
+
   text-transform: capitalize;
+}
+
+/* 
+====== 
+Video List 
+======
+*/
+.section {
+  padding: 3rem 0;
+}
+
+.thumbnails-center {
+  width: var(--smallWidth);
+  margin: 0 auto;
+  max-width: var(--fullWidth);
+  display: grid;
+  row-gap: 2rem;
+  column-gap: 2rem;
+}
+
+@media screen and (min-width: 576px) {
+  .thumbnails-center {
+    grid-template-columns: repeat(auto-fill, minmax(338px, 1fr));
+  }
+}
+
+.videos {
+  background: var(--mainWhite);
+  margin-bottom: 2rem;
+  box-shadow: var(--lightShadow);
+  transition: var(--mainTransition);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border-radius: var(--mainBorderRadius);
+  text-align: center;
+}
+
+.videos:hover {
+  box-shadow: var(--darkShadow);
+}
+
+.videos img {
+  object-fit: cover;
+  border-top-left-radius: var(--mainBorderRadius);
+  border-top-right-radius: var(--mainBorderRadius);
+}
+
+.videos-footer h3 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
 }
