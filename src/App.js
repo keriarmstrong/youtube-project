@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
+
 // import NavBar from './Components/NavBar';
 import Home from './Components/Home';
 import About from './Components/About';
@@ -10,22 +10,14 @@ function App() {
   return (
     <div className="App">
       {/* <NavBar/> */}
-      <Routes>
-        <Route path='/home' element={ <Home/> } />
-        <Route path='/about' element={ <About/> } />
-        <Route path='/search' element={ <SearchBar/> } />
+  
 
+    <h1>Youtube Clone</h1>
 
-
-
-
-
-
+    <h2>videos</h2>
 
       </Routes>
       <h3>WORD</h3>
-
-    <h1></h1>
     </div>
   );
 }
