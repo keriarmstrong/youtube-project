@@ -7,8 +7,13 @@ export function getData(searchQuery) {
         .then(resp => resp.json())
 }
 
+
 export function getAllVideos() {
     return fetch(`${URL}videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=10&regionCode=US&key=${KEY}`)
         .then((resp) => resp.json())
+}
 
+// get one video
+export function getVideoDetails(id) {
+    return fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${id}&key=${KEY}`).then(res => res.json())
 }

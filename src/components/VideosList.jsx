@@ -7,7 +7,7 @@ const VideosList = () => {
 
   useEffect(() => {
     getAllVideos().then((resp) => {
-      console.log(resp.items);
+      console.log(resp);
       setVideoList(resp.items);
     })
   }, [])
@@ -16,6 +16,7 @@ const VideosList = () => {
 
     <section className="section">
       <div className="thumbnails-center">
+      {/* <h1>Test</h1> */}
         {videoList.map((video) => {
           return <Video video={video} key={video.etag} />
         })}
