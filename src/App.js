@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import SingleVid from "./pages/SingleVid";
+import SearchResults from './pages/SearchResults';
 import Error from "./pages/Error";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+         <Route path="/searchresults/:search" element={<SearchResults />} />
         <Route path="/video/:id" element={<SingleVid />} />
         <Route path="*" element={<Error />} />
       </Routes>

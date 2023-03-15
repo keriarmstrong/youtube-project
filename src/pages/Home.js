@@ -1,12 +1,26 @@
-import SearchForm from "../components/SearchForm";
+import { useState, useEffect } from "react";
 import VideosList from "../components/VideosList";
 
+import { getAllVideos } from "../fetch"
+
+
 const Home = () => {
+  const [videoList, setVideoList] = useState([])
+  
+  useEffect(() => {
+    getAllVideos().then((resp) => {
+      console.log(resp);
+      setVideoList(resp.items);
+    })
+  }, [])
+
   return (
-    <main>
-      <SearchForm />
-      <VideosList />
-    </main>
+    <section className='section'>
+      <VideosList videoList={videoList}  />
+    </section>
   )
 }
-export default Home
+export default Home;
+
+
+
