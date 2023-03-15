@@ -1,23 +1,35 @@
 
-const SearchForm = ({searchQuery, setSearchQuery, handleSubmit}) => {
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
+function SearchForm() {
+  const navigate = useNavigate()
+  const [userInput, setUserInput] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate(`/searchresults/${userInput}`)
+    setUserInput(""); 
+  };
 
   return (
-    <section className='section search'>
-      <form onSubmit={handleSubmit} className='search-form'>
-        <div className='form-control'>
-          <label htmlFor='name'>search your favorite video</label>
-          <input
-            type='search'
-            placeholder="Enter here..."
-            name='name'
-            value={searchQuery}
-            onChange={event =>setSearchQuery(event.target.value)}
-          />
-          <button type='submit'  className='btn' style={{ marginTop: '10px' }}>Search</button>
+      <form className="search-form" onSubmit={handleSubmit}>
+        <div className="form-control">
+          <div className="input-container">
+            <input
+              type="text"
+              placeholder="search your favorite video..."
+              name="searchInput"
+              value={userInput}
+              onChange={(e) => setUserInput(e.target.value)}
+            />
+              <button type="submit" style={{backgroundColor: '#fff', borderRadius: '10px'}} className="btn clear" >
+                🔍︎
+              </button>
+          </div>  
         </div>
-      </form>
-    </section>
-  )
+      </form>  
+  );
 }
-export default SearchForm
+
+export default SearchForm;
