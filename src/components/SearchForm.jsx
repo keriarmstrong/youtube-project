@@ -1,16 +1,20 @@
-const SearchForm = () => {
+
+const SearchForm = ({searchQuery, setSearchQuery, handleSubmit}) => {
+
 
   return (
     <section className='section search'>
-      <form className='search-form'>
+      <form onSubmit={handleSubmit} className='search-form'>
         <div className='form-control'>
           <label htmlFor='name'>search your favorite video</label>
           <input
-            type='text'
+            type='search'
             placeholder="Enter here..."
             name='name'
+            value={searchQuery}
+            onChange={event =>setSearchQuery(event.target.value)}
           />
-          <button type='submit' className='btn' style={{ marginTop: '10px' }}>Search</button>
+          <button type='submit'  className='btn' style={{ marginTop: '10px' }}>Search</button>
         </div>
       </form>
     </section>

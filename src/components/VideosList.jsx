@@ -1,20 +1,13 @@
-import { getAllVideos } from "../fetch"
-import { useState, useEffect } from "react"
 import Video from "./Video"
 
-const VideosList = () => {
-  const [videoList, setVideoList] = useState([])
-
-  useEffect(() => {
-    getAllVideos().then((resp) => {
-      console.log(resp);
-      setVideoList(resp.items);
-    })
-  }, [])
+const VideosList = ({ category, videoList }) => {
 
   return (
 
     <section className="section">
+      <section className="category">
+        <div><h3>{category} <span style={{color: "red"}}>Videos</span></h3></div>
+      </section>
       <div className="thumbnails-center">
       {/* <h1>Test</h1> */}
         {videoList.map((video) => {

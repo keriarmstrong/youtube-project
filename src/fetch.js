@@ -3,7 +3,7 @@ const URL = `https://youtube.googleapis.com/youtube/v3/`
 const KEY = process.env.REACT_APP_API_KEY
 
 export function getData(searchQuery) {
-    return fetch(`${URL}search?part=snippet&maxResults=10&q=${searchQuery}&key=${KEY}`)
+     return fetch(`${URL}search?part=snippet&maxResults=10&q=${searchQuery}&key=${KEY}`)
         .then(resp => resp.json())
 }
 
@@ -13,7 +13,9 @@ export function getAllVideos() {
         .then((resp) => resp.json())
 }
 
+
 // get one video
 export function getVideoDetails(id) {
     return fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${id}&key=${KEY}`).then(res => res.json())
 }
+
