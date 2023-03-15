@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 
 const Video = ({ video }) => {
-  console.log(video)
+  // console.log(video)
   return (
     <article className="videos">
       <Link to={`/video/${video.id}`}>
