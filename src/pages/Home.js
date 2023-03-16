@@ -1,12 +1,6 @@
 import { useState, useEffect } from "react";
 import VideosList from "../components/VideosList";
-import { getData } from "../fetch";
-import { useState, useEffect } from "react";
 import { getAllVideos } from "../fetch";
-
-
-import { getAllVideos } from "../fetch"
-
 
 const Home = () => {
   const [videoList, setVideoList] = useState([])
@@ -20,6 +14,7 @@ const Home = () => {
 
   return (
     <section className='section'>
+      <h1 style={{textAlign:"center", color:"red"}}>Videos</h1>
       <VideosList videoList={videoList}  />
     </section>
   )
