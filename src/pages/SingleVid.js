@@ -10,7 +10,6 @@ const SingleVid = () => {
   useEffect(() => {
     getVideoDetails(id).then((resp) => {
       setVideo(resp.items[0]);
-      console.log(resp);  
     });
   }, [id]);
 
