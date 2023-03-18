@@ -2,15 +2,19 @@ import { useState, useEffect } from "react";
 import VideosList from "../components/VideosList";
 import { getAllVideos } from "../fetch";
 
-const Home = () => {
+
+const Home = ({error, setError}) => {
   const [videoList, setVideoList] = useState([])
   
   useEffect(() => {
     getAllVideos().then((resp) => {
-      console.log(resp);
-      setVideoList(resp.items);
+  
+      setVideoList(resp.items)
     })
-  }, [])
+    .catch((error)=>{
+      setError(true)
+    })
+  },[setError])
 
   return (
     <section className='section'>

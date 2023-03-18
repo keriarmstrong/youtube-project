@@ -11,12 +11,14 @@ const About = () => {
       <br />
       As a Full Stack Developer, I bring to the table a diverse set of interests that shape my perspective and approach to my work. In my free time, I enjoy exploring the culinary arts and delving into books that broaden my understanding of the world. These hobbies have taught me the value of patience, attention to detail, and following a well-defined process - skills that directly transfer to my work as a developer.
       <br />
+      <br/>
       <div><b><center>Keri Emmanuel</center></b></div>
       <div><u><a href="https://github.com/keriarmstrong"><center><b>GitHub</b></center></a></u></div>
       <div><u><a href="https://www.linkedin.com/in/keri-armstrong/"><center><b>LinkedIn</b></center></a></u></div>
       <br />
-
+      A Father, Computer technician, Dreamer and now fledgling FSW Developer ready to soar to new highs. With an interest in technology stemming way back to when programing the time on your VCR was an accomplishment , if you remember those. I’ve always been a tinkerer on a journey to figure out how things work while posing the question of how could this be better if I was responsible for creating it.
       <br />
+      <br/>
       <div><b><center>Johnny Castillo</center></b></div>
       <div> <u><a href="https://github.com/JohnnyMCR"><center><b>GitHub</b></center></a></u></div>
       <div> <u><a href="https://www.linkedin.com/in/johnnycastillo"><center><b>LinkedIn</b></center></a></u></div>
