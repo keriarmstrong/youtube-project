@@ -1,6 +1,6 @@
 import Video from "./Video"
 
-const VideosList = ({ category, videoList }) => {
+const VideosList = ({ videoList }) => {
 
   return (
     <section className="section">
