@@ -1,7 +1,7 @@
+import YouTube from "react-youtube";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getVideoDetails } from "../fetch";
-
 
 const SingleVid = () => {
   const { id } = useParams();
@@ -9,7 +9,8 @@ const SingleVid = () => {
 
   useEffect(() => {
     getVideoDetails(id).then((resp) => {
-      setVideo(resp.items[0]);  
+      setVideo(resp.items[0]);
+      console.log(resp);  
     });
   }, [id]);
 
@@ -17,27 +18,19 @@ const SingleVid = () => {
     return <div className="loading-container">Loading...</div>;
   }
 
-  const videoSrc = `https://www.youtube.com/embed/${video.id}`;
+  const { title, channelTitle, publishedAt } = video.snippet;
+  const publishedDate = new Date(publishedAt).toLocaleDateString();
 
   return (
     <section className="section">
-    <div className="video-player-container">
-      <iframe
-        className="video-player"
-        title={video.snippet.title}
-        src={videoSrc}
-        allowFullScreen
-      />
-      <div className="video-info-container">
-        <h2 className="video-title">{video.snippet.title}</h2>
-        <h4 className="channel-title">{video.snippet.channelTitle}</h4>
-        <p className="published-date">
-          {video.snippet.publishedAt.slice(5, 7)}-
-          {video.snippet.publishedAt.slice(8, 10)}-
-          {video.snippet.publishedAt.slice(0, 4)}
-        </p>
+      <div className="video-player-container">
+        <YouTube videoId={id} />
+        <div className="video-info-container">
+          <h2 className="video-title">{title}</h2>
+          <h4 className="channel-title">{channelTitle}</h4>
+          <p className="published-date">{publishedDate}</p>
+        </div>
       </div>
-    </div>
     </section>
   );
 };
