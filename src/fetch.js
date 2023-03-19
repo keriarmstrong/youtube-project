@@ -3,6 +3,7 @@ const URL = `https://youtube.googleapis.com/youtube/v3/`
 const KEY = process.env.REACT_APP_API_KEY
 
 
+// (`${URL}search?part=snippet&maxResults=10&q=${search}&order=${order}&key=${KEY}`)
 export function getData(search) {
     return fetch(`${URL}search?part=snippet&maxResults=10&q=${search}&key=${KEY}`)
         .then(resp => resp.json())

@@ -10,6 +10,7 @@ const Home = ({error, setError}) => {
     getAllVideos().then((resp) => {
   
       setVideoList(resp.items)
+      console.log(videoList);
     })
     .catch((error)=>{
       setError(true)
