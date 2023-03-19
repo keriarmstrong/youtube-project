@@ -34,7 +34,7 @@ function CommentForm() {
   const arr = [...comments];
   arr.push({ commenter: commenter, comment: comment });
   setComments(arr);
-  localStorage.setItem("comments", JSON.stringify(arr));
+  
 }
 
 
@@ -50,7 +50,7 @@ function CommentForm() {
   const arr = [...comments];
   arr[index] = { commenter: commenter, comment: comment };
   setComments(arr);
-  localStorage.setItem("comments", JSON.stringify(arr));
+  
 }
 
 
@@ -58,7 +58,7 @@ function CommentForm() {
   const arr = [...comments];
   arr.splice(index, 1);
   setComments(arr);
-  localStorage.setItem("comments", JSON.stringify(arr));
+ 
 }
 
 
