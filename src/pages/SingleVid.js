@@ -1,6 +1,7 @@
 import YouTube from "react-youtube";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import CommentForm from "../components/CommentForm";
 import { getVideoDetails } from "../fetch";
 
 const SingleVid = () => {
@@ -30,8 +31,10 @@ const SingleVid = () => {
           <p className="published-date">{publishedDate}</p>
         </div>
       </div>
+      <CommentForm />
     </section>
   );
 };
 
 export default SingleVid;
+
