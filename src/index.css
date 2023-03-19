@@ -305,3 +305,114 @@ Single Video
   font-size: 1rem;
   color: gray;
 }
+
+/*
+============= 
+Comment Form  
+=============
+*/
+
+/* Form styles */
+
+.section-form {
+  width: var(--smallWidth);
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+}
+
+.hr {
+  height: 1px;
+  background-color: #ccc;
+  border: none;
+  margin-bottom: 20px;
+}
+.comments {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.comment-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.comment-input {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#formButton {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+#formButton:hover {
+  background-color: #3e8e41;
+}
+
+/* Comment styles */
+
+.comment {
+  list-style: none;
+  margin: 20px;
+  padding: 0;
+}
+
+.comment li {
+  margin-bottom: 20px;
+}
+
+.commenter {
+  font-weight: bold;
+}
+
+.commentText {
+  margin-left: 20px;
+}
+
+.deleteButton {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 5px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.deleteButton:hover {
+  background-color: #da190b;
+}
+
+.editButton {
+  background-color: #008CBA;
+  color: #fff;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 5px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.editButton:hover {
+  background-color: #006a80;
+}
